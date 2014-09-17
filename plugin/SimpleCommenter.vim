@@ -6,7 +6,7 @@ function! CommentDelimiter()
     return "\/\/ "
   elseif &ft =~ "^\(python\|sh\)$"
     " Delimiter #
-    return "# "
+    return "\# "
   elseif &ft =~ "^\(haskell\|lua\)$"
     " Delimiter --
     return "-- "

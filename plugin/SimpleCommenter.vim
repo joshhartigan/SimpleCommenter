@@ -1,20 +1,34 @@
 " Get string to put at beginning
 " of lines to comment out the line
 function! CommentDelimiter()
-  if &ft =~ "^\(java\|cpp\|javascript\|c\|go)$"
-    " Delimiter //
+
+  if &ft == "java"
     return "\/\/ "
-  elseif &ft =~ "^\(python\|sh\)$"
-    " Delimiter #
+  elseif &ft == "cpp"
+    return "\/\/ "
+  elseif &ft == "javascript"
+    return "\/\/ "
+  elseif &ft == "c"
+    return "\/\/ "
+  elseif &ft == "go"
+    return "\/\/ "
+
+  elseif &ft == "python"
     return "\# "
-  elseif &ft =~ "^\(haskell\|lua\)$"
-    " Delimiter --
+  elseif &ft == "sh"
+    return "\# "
+
+  elseif &ft == "haskell"
     return "-- "
-  elseif &ft =~ "^\(clojure\|lisp\)$"
-    " Delimiter ;
+  elseif &ft == "lua"
+    return "-- "
+
+  elseif &ft == "clojure"
     return ";; "
-  elseif &ft =~ "^vim$"
-    " Delimiter "
+  elseif &ft == "lisp"
+    return ";; "
+
+  elseif &ft == "vim"
     return "\" "
   endif
 endfunction
@@ -24,7 +38,7 @@ function! CommentLine()
   exec "normal! mS"
   exec "silent! " . "s/^/" . CommentDelimiter() . "/"
   exec "normal! `S"
-  
+
 endfunction
 
 " Remove delimiter from current line/s
@@ -36,3 +50,4 @@ endfunction
 
 command SimpleComment   call CommentLine()
 command SimpleUncomment call UnCommentLine()
+

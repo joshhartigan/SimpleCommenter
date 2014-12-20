@@ -3,15 +3,14 @@
 function! CommentDelimiter()
 
   if &ft == "java"
-    return "\/\/ "
+    return "\\\/\\\/ "
   elseif &ft == "cpp"
-    return "\/\/ "
+    return "\\\/\\\/ "
   elseif &ft == "javascript"
-    return "\/\/ "
   elseif &ft == "c"
-    return "\/\/ "
+    return "\\\/\\\/ "
   elseif &ft == "go"
-    return "\/\/ "
+    return "\\\/\\\/ "
 
   elseif &ft == "python"
     return "\# "
@@ -50,4 +49,3 @@ endfunction
 
 command SimpleComment   call CommentLine()
 command SimpleUncomment call UnCommentLine()
-

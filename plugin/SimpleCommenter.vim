@@ -53,5 +53,5 @@ function! UnCommentLine()
   exec "normal! `S"
 endfunction
 
-command SimpleComment   call CommentLine()
-command SimpleUncomment call UnCommentLine()
+command! SimpleComment   call CommentLine()
+command! SimpleUncomment call UnCommentLine()

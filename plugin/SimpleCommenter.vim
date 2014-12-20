@@ -16,6 +16,10 @@ function! CommentDelimiter()
     return "\# "
   elseif &ft == "sh"
     return "\# "
+  elseif &ft == "ruby"
+    return "\# "
+  elseif &ft == "coffee"
+    return "\# "
 
   elseif &ft == "haskell"
     return "-- "
@@ -25,6 +29,8 @@ function! CommentDelimiter()
   elseif &ft == "clojure"
     return ";; "
   elseif &ft == "lisp"
+    return ";; "
+  elseif &ft == "scheme"
     return ";; "
 
   elseif &ft == "vim"

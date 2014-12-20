@@ -58,5 +58,8 @@ SimpleCommenter currently supports the following languages by default:
 * Lua
 * Clojure
 * Lisp
+* Ruby
+* CoffeeScript
+* Scheme
 
 In the future, support for adding your own languages will be implemented.

@@ -12,7 +12,7 @@ SimpleCommenter aims to be:
 
 ### Installation
 
-**via Vundle (recommended):**
+**via Vundle / vim-plug (recommended):**
 ```
 Plugin "joshhartigan/SimpleCommenter"
 ```

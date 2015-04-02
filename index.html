@@ -1,0 +1,95 @@
+<!doctype html>
+<html>
+<head>
+<title>* simplecommenter *</title>
+<link href='http://fonts.googleapis.com/css?family=Inconsolata:400,700' rel='stylesheet' type='text/css'>
+<style type="text/css">
+<!--
+pre { white-space: pre-wrap; font-family: 'Inconsolata'; color: #d9d9d9; background-color: #252525; }
+body { font-family: 'Inconsolata'; color: #d9d9d9; background-color: #252525; }
+* { font-size: 1em; }
+.htmlBold { font-weight: bold; }
+.Statement { color: #98bc99; font-weight: bold; }
+.Title { color: #e0bebc; font-weight: bold; }
+.Delimiter { color: #be9873; }
+a, a:visited { color: aqua; text-decoration: none; }
+a:hover { color: teal; text-decoration: underline; }
+-->
+</style>
+
+<script type='text/javascript'>
+<!--
+
+-->
+</script>
+</head>
+<body>
+<pre id='vimCodeElement'>
+<img src="simplecommenter.png" alt="Simple Commenter" />
+
+KISS Commenting for Vim
+
+SimpleCommenter is precisely what its name suggests - a simpler, smaller, and
+more primitive alternative to the other commentary plugins available for Vim.
+SimpleCommenter aims to be:
+
+<span class="Statement">*</span> Non-intrusive - only there when you need it.
+<span class="Statement">*</span> Respectful of your workflow - xkcd.com/1172/
+<span class="Statement">*</span> Simply functional - 'it just works'
+
+<span class="Delimiter">###</span><span class="Title"> Installation</span>
+
+<span class="htmlBold">via Vundle / vim-plug (recommended):</span>
+
+    Plugin &quot;joshhartigan/SimpleCommenter&quot;
+
+
+<span class="htmlBold">via Pathogen:</span>
+
+    cd ~/.vim/bundle &amp;&amp; \
+    git clone <a href="https://github.com/joshhartigan/SimpleCommenter">https://github.com/joshhartigan/SimpleCommenter</a>
+
+
+<span class="Delimiter">####</span><span class="Title"> Key Mappings</span>
+
+SimpleCommenter doesn't have a default keymapping for commenting or
+uncommenting lines, so that it doesn't conflict with any keymappings that you
+might already have configured.
+However, this is not a big disadvantage, because setting a keymapping for the
+plugin's functionality is very simple.
+
+    &quot; mapping for SimpleCommenter - comment out line
+    nmap &lt;KEY&gt; :SimpleComment&lt;cr&gt;
+    &quot; insert mode mapping
+    imap &lt;KEY&gt; &lt;esc&gt;:SimpleComment&lt;cr&gt;i
+
+    &quot; mapping for SimpleCommenter - uncomment line
+    nmap &lt;KEY&gt; :SimpleUncomment&lt;cr&gt;
+    &quot; insert mode mapping
+    imap &lt;KEY&gt; &lt;esc&gt;:SimpleUncomment&lt;cr&gt;i
+
+
+<span class="Delimiter">####</span><span class="Title"> Language Support</span>
+
+SimpleCommenter currently supports the following languages by default:
+
+<span class="Statement">*</span> Java
+<span class="Statement">*</span> C++
+<span class="Statement">*</span> JavaScript
+<span class="Statement">*</span> C
+<span class="Statement">*</span> Go
+<span class="Statement">*</span> Python
+<span class="Statement">*</span> Bash / Shell
+<span class="Statement">*</span> Haskell
+<span class="Statement">*</span> Lua
+<span class="Statement">*</span> Clojure
+<span class="Statement">*</span> Lisp
+<span class="Statement">*</span> Ruby
+<span class="Statement">*</span> CoffeeScript
+<span class="Statement">*</span> Scheme
+
+In the future, support for adding your own languages will be implemented.
+</pre>
+</body>
+</html>
+<!-- vim: set foldmethod=manual : -->

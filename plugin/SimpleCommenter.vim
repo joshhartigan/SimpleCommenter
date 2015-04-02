@@ -1,7 +1,6 @@
 " Get string to put at beginning
 " of lines to comment out the line
 function! CommentDelimiter()
-
   if &ft == "java"
     return "\\\/\\\/ "
   elseif &ft == "cpp"
@@ -43,7 +42,6 @@ function! CommentLine()
   let saved_cursor_pos = getcurpos()
   exec "silent! " . "s/^/" . CommentDelimiter() . "/"
   setpos('.', saved_cursor_pos)
-
 endfunction
 
 " Remove delimiter from current line/s

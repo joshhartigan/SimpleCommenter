@@ -40,17 +40,17 @@ endfunction
 
 " Insert delimiter to comment-out current line/s
 function! CommentLine()
-  exec "normal! mS"
+  let saved_cursor_pos = getcurpos()
   exec "silent! " . "s/^/" . CommentDelimiter() . "/"
-  exec "normal! `S"
+  setpos('.', saved_cursor_pos)
 
 endfunction
 
 " Remove delimiter from current line/s
 function! UnCommentLine()
-  exec "normal! mS"
+  let saved_cursor_pos = getcurpos()
   exec "silent! " . "s/^" . CommentDelimiter() . "//e"
-  exec "normal! `S"
+  setpos('.', saved_cursor_pos)
 endfunction
 
 command! SimpleComment   call CommentLine()

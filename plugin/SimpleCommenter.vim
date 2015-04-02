@@ -41,14 +41,14 @@ endfunction
 function! CommentLine()
   let saved_cursor_pos = getcurpos()
   exec "silent! " . "s/^/" . CommentDelimiter() . "/"
-  setpos('.', saved_cursor_pos)
+  call setpos('.', saved_cursor_pos)
 endfunction
 
 " Remove delimiter from current line/s
 function! UnCommentLine()
   let saved_cursor_pos = getcurpos()
   exec "silent! " . "s/^" . CommentDelimiter() . "//e"
-  setpos('.', saved_cursor_pos)
+  call setpos('.', saved_cursor_pos)
 endfunction
 
 command! SimpleComment   call CommentLine()
